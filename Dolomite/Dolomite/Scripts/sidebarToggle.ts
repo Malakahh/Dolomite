@@ -1,18 +1,20 @@
 ﻿let toggled : boolean = false
 
 $(document).ready(function() {
-
+    console.log("ts works!")
 
 	$(".dSidebarToggler").click(function(e) {
 		e.preventDefault();
-		if (!toggled) {
+		if (toggled) {
 			$(".dSidebar").addClass("col-md-12");
 			$(".dSidebar").removeClass("col-md-10");
-			toggled = true
+            toggled = false
+            console.log("toggle off")
 		} else {
 			$(".dSidebar").addClass("col-md-10");
 			$(".dSidebar").removeClass("col-md-12");
-			toggled = false
+            toggled = true
+            console.log("toggle on")
 		}
 
 	
