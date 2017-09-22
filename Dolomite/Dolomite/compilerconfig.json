@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/layout/sidebar.css",
+    "inputFile": "wwwroot/css/layout/sidebar.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/layout/flexContainer.css",
+    "inputFile": "wwwroot/css/layout/flexContainer.scss"
+  }
+]
