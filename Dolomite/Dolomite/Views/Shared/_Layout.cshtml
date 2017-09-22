@@ -16,15 +16,18 @@
     </environment>
 </head>
 <body>
-    <nav class="dSidebar navbar navbar-inverse navbar-fixed-top navbar-light">
+    <div class="dSidebar">
         <ul class="dSidebarItemList">
             <li>
                 <div class="dSidebarItemText">
-                    Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest
+                    
                 </div>
-                <button type="button" class="dSidebarItemIcon dSidebarToggler navbar-toggler">
-                    <span class="navbar-toggler-icon" />
-                </button>
+                <div class="dSidebarHamburger dSidebarToggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </li>
             <li>
                 <button type="button" class="dSidebarToggler navbar-toggler">
@@ -32,7 +35,7 @@
                 </button>
             </li>
         </ul>
-    </nav>
+    </div>
     <div class="dMainContent container body-content">
         @RenderBody()
         <hr />
