@@ -1,6 +1,27 @@
 ﻿body {
-  background-color: #000041; }
+  background-color: #000037; }
 
 .dSidebar {
   background-color: #000025; }
+
+.dSidebarItemList {
+  padding-top: 10px; }
+  .dSidebarItemList li {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+.dSidebarItemText {
+  text-indent: 5px;
+  color: #BBBBBB; }
+  .dSidebarItemText .dSidebarItemTextLarge {
+    color: #BBBBBB;
+    font-size: 26px; }
+  .dSidebarItemText:hover {
+    color: #FFFFFF; }
+
+.dSidebarHamburger span {
+  background-color: #BBBBBB; }
+
+.dSidebarHamburger:hover span {
+  background-color: #FFFFFF; }
 

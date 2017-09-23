@@ -1,11 +1,51 @@
-﻿// Colors:
-// 0x41
-// 0x25
+﻿$mainColorLight: #000037;
+$mainColorDark: #000025;
+$textColorLightNormal: #BBBBBB;
+$textColorLightHover: #FFFFFF;
 
 body {
-    background-color: #000041;
+    background-color: $mainColorLight;
 }
 
 .dSidebar {
-    background-color: #000025;
+    background-color: $mainColorDark;
+}
+
+
+
+.dSidebarItemList {
+    $padding: 10px;
+    padding-top: $padding;
+
+    li  {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+
+.dSidebarItemText {
+    text-indent: 5px;
+    color: $textColorLightNormal;
+
+    .dSidebarItemTextLarge {
+        color: $textColorLightNormal;
+        font-size: 26px;
+    }
+
+    &:hover {
+        color: $textColorLightHover;
+    }
+}
+
+
+.dSidebarHamburger {
+    span {
+        background-color: $textColorLightNormal;
+    }
+
+    &:hover {
+        span {
+            background-color: $textColorLightHover;
+        }
+    }
 }

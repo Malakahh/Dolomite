@@ -1,62 +1,67 @@
 ﻿$transformDuration: .5s;
 $easing: ease-in-out;
+$sidebarWidth: 200px;
 
 .dSidebar {
-    padding: 0px;
-    height: 100vh;
-    transition-timing-function: ease;
-    position:fixed;
-    width: 15%;
-    left: -10%;
-    transition: $transformDuration $easing;
-    z-index:15;
+    margin-left: -$sidebarWidth;
+    left: 80px;
+    width: $sidebarWidth;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all $transformDuration $easing;
 }
 
 .dSidebarToggled {
-    left: 0%;
+    margin-left: -80px;
 }
 
 .dSidebarItemList {
-    list-style-type:none;
-    width: 100%;
-    $paddingH: 5px;
-    padding-left: $paddingH;
-    padding-right: $paddingH;
+    display: block;
+    float: left;
+    width: $sidebarWidth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-
 .dSidebarItemList li {
-    display:flex;
-    flex-direction:row;
-    overflow:hidden;
+    height: 50px;
 
     .dSidebarItemText {
-        flex: 2 0;
-        word-wrap:break-word;       
-    }
+        position: relative;
+        display: flex;
+        align-items: center;
+        float: left;
+        width: 100%;
+        height: 100%;
+        transition: $transformDuration $easing;
 
-    .dSidebarItemIcon {
-        
-        flex: 1 1;
-        margin-left:auto;
-        width:50px;
+        .dSidebarItemIcon {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: calc(100% / 3);
+            height: 100%;
+        }
     }
 }
 
 .dMainContent {
-    margin-left: 5%;
+    margin-left: 80px;
     transition: $transformDuration $easing;
 }
 
 .dMainContentToggled {
-    margin-left: 15%;
+    margin-left: $sidebarWidth;
 }
 
 .dSidebarHamburger {
     width: 100%;
     height: 75%;
     position: relative;
-    //margin: 50px auto;
     transform: rotate(0deg);
     transition: $transformDuration $easing;
 
@@ -65,8 +70,7 @@ $easing: ease-in-out;
         position: absolute;
         height: 15%;
         width: 100%;
-        background: #d3531a;
-        border-radius: 15%;
+        border-radius: 9px;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
@@ -78,32 +82,33 @@ $easing: ease-in-out;
     }
 
     span:nth-child(2), span:nth-child(3) {
-        top: 30%;
+        top: 40%;
     }
 
     span:nth-child(4) {
-        top: 60%;
+        top: 80%;
+    }
+
+    &.open {
+        span:nth-child(1) {
+            top: 30%;
+            width: 0%;
+            left: 50%;
+        }
+
+        span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(4) {
+            top: 30%;
+            width: 0%;
+            left: 50%;
+        }
     }
 }
 
-.dSidebarHamburger.open {
-    span:nth-child(1) {
-        top: 30%;
-        width: 0%;
-        left: 50%;
-    }
-
-    span:nth-child(2) {
-        transform: rotate(45deg);
-    }
-
-    span:nth-child(3) {
-        transform: rotate(-45deg);
-    }
-
-    span:nth-child(4) {
-        top: 30%;
-        width: 0%;
-        left: 50%;
-    }
-}
