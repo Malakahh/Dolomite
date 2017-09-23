@@ -1,4 +1,5 @@
 ﻿$transformDuration: .5s;
+$easing: ease-in-out;
 
 .dSidebar {
     padding: 0px;
@@ -7,7 +8,7 @@
     position:fixed;
     width: 15%;
     left: -10%;
-    transition: $transformDuration ease-in-out;
+    transition: $transformDuration $easing;
     z-index:15;
 }
 
@@ -43,50 +44,51 @@
 }
 
 .dMainContent {
-    margin-left: calc(5% - 10px);
-    transition: $transformDuration ease-in-out;
+    margin-left: 5%;
+    transition: $transformDuration $easing;
 }
 
 .dMainContentToggled {
-    margin-left: calc(15% - 10px);
+    margin-left: 15%;
 }
 
 .dSidebarHamburger {
-    width: 60px;
-    height: 45px;
+    width: 100%;
+    height: 75%;
     position: relative;
-    margin: 50px auto;
+    //margin: 50px auto;
     transform: rotate(0deg);
-    
+    transition: $transformDuration $easing;
+
     span {
         display: block;
         position: absolute;
-        height: 9px;
+        height: 15%;
         width: 100%;
         background: #d3531a;
-        border-radius: 9px;
+        border-radius: 15%;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: $transformDuration ease-in-out;
+        transition: $transformDuration $easing;
     }
 
     span:nth-child(1) {
-        top: 0px;
+        top: 0%;
     }
 
     span:nth-child(2), span:nth-child(3) {
-        top: 18px
+        top: 30%;
     }
 
     span:nth-child(4) {
-        top: 36px;
+        top: 60%;
     }
 }
 
 .dSidebarHamburger.open {
     span:nth-child(1) {
-        top: 18px;
+        top: 30%;
         width: 0%;
         left: 50%;
     }
@@ -100,7 +102,7 @@
     }
 
     span:nth-child(4) {
-        top: 18px;
+        top: 30%;
         width: 0%;
         left: 50%;
     }

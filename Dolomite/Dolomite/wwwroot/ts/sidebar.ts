@@ -3,7 +3,7 @@ const dSidebar = document.getElementsByClassName("dSidebar")[0];
 const dMainContent = document.getElementsByClassName("dMainContent")[0];
 const dSidebarHamburger = document.getElementsByClassName("dSidebarHamburger")[0];
 
-document.getElementsByClassName("dSidebarToggler")[0].addEventListener("click", function () {
+dSidebarHamburger.addEventListener("click", function () {
     if (sidebarHidden) {
         dSidebar.classList.add("dSidebarToggled");
         dMainContent.classList.add("dMainContentToggled");
