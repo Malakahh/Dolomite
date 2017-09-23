@@ -1,15 +1,12 @@
 ﻿.dSidebar {
-  background-color: #FF00FF;
   padding: 0px;
   height: 100vh;
   transition-timing-function: ease;
   position: fixed;
   width: 15%;
   left: -10%;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; }
+  transition: 0.5s ease-in-out;
+  z-index: 15; }
 
 .dSidebarToggled {
   left: 0%; }
@@ -20,22 +17,12 @@
   padding-left: 5px;
   padding-right: 5px; }
 
-/*.dSidebarToggled .dSidebarItemList li .dSidebarItemText {
-    display: inline;
-    left: 0px;
-    transition-timing-function: ease;
-    transition: left 0.2s;
-}*/
 .dSidebarItemList li {
   display: flex;
   flex-direction: row;
   overflow: hidden; }
   .dSidebarItemList li .dSidebarItemText {
     flex: 2 0;
-    /*position:relative;
-        //left: -105%;
-        transition-timing-function: ease;
-        transition: left 0.2s;*/
     word-wrap: break-word; }
   .dSidebarItemList li .dSidebarItemIcon {
     flex: 1 1;
@@ -43,28 +30,18 @@
     width: 50px; }
 
 .dMainContent {
-  margin-left: 5%;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; }
+  margin-left: calc(5% - 10px);
+  transition: 0.5s ease-in-out; }
 
 .dMainContentToggled {
-  margin-left: 15%; }
+  margin-left: calc(15% - 10px); }
 
 .dSidebarHamburger {
   width: 60px;
   height: 45px;
   position: relative;
   margin: 50px auto;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; }
+  transform: rotate(0deg); }
   .dSidebarHamburger span {
     display: block;
     position: absolute;
@@ -74,14 +51,8 @@
     border-radius: 9px;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out; }
+    transition: 0.5s ease-in-out; }
   .dSidebarHamburger span:nth-child(1) {
     top: 0px; }
   .dSidebarHamburger span:nth-child(2), .dSidebarHamburger span:nth-child(3) {
@@ -95,15 +66,9 @@
   left: 50%; }
 
 .dSidebarHamburger.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .dSidebarHamburger.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
 .dSidebarHamburger.open span:nth-child(4) {

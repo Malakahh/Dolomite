@@ -1,15 +1,14 @@
-﻿.dSidebar {
-    background-color: #FF00FF;
+﻿$transformDuration: .5s;
+
+.dSidebar {
     padding: 0px;
     height: 100vh;
     transition-timing-function: ease;
     position:fixed;
     width: 15%;
     left: -10%;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+    transition: $transformDuration ease-in-out;
+    z-index:15;
 }
 
 .dSidebarToggled {
@@ -24,29 +23,15 @@
     padding-right: $paddingH;
 }
 
-/*.dSidebarToggled .dSidebarItemList li .dSidebarItemText {
-    display: inline;
-    left: 0px;
-    transition-timing-function: ease;
-    transition: left 0.2s;
-}*/
 
 .dSidebarItemList li {
     display:flex;
     flex-direction:row;
     overflow:hidden;
-    //justify-content:space-between;
 
     .dSidebarItemText {
         flex: 2 0;
-        /*position:relative;
-        //left: -105%;
-        transition-timing-function: ease;
-        transition: left 0.2s;*/
-        //display:none;
-        word-wrap:break-word;
-        //width: auto;
-        
+        word-wrap:break-word;       
     }
 
     .dSidebarItemIcon {
@@ -58,15 +43,12 @@
 }
 
 .dMainContent {
-    margin-left: 5%;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+    margin-left: calc(5% - 10px);
+    transition: $transformDuration ease-in-out;
 }
 
 .dMainContentToggled {
-    margin-left: 15%;
+    margin-left: calc(15% - 10px);
 }
 
 .dSidebarHamburger {
@@ -74,15 +56,8 @@
     height: 45px;
     position: relative;
     margin: 50px auto;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-
+    
     span {
         display: block;
         position: absolute;
@@ -92,14 +67,8 @@
         border-radius: 9px;
         opacity: 1;
         left: 0;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
         transform: rotate(0deg);
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        -o-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        transition: $transformDuration ease-in-out;
     }
 
     span:nth-child(1) {
@@ -123,16 +92,10 @@
     }
 
     span:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
     span:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
 

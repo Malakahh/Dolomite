@@ -16,4 +16,3 @@ document.getElementsByClassName("dSidebarToggler")[0].addEventListener("click", 
         sidebarHidden = true;
     }
 });
-//# sourceMappingURL=sidebar.js.map
