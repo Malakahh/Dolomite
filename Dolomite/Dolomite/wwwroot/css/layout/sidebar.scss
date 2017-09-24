@@ -1,19 +1,33 @@
 ﻿$transformDuration: .5s;
 $easing: ease-in-out;
 $sidebarWidth: 200px;
+$sidebarInside: 70px;
+$topbarHeight: 50px;
+
+.dTopbar {
+    width: 100%;
+    height: $topbarHeight;
+}
 
 .dSidebar {
     margin-left: -$sidebarWidth;
-    left: 80px;
+    position: absolute;
+    top: $topbarHeight;
+    height: calc(100% - #{$topbarHeight});
+    left: $sidebarInside;
     width: $sidebarWidth;
-    position: fixed;
-    height: 100%;
     z-index: 10000;
-    transition: all $transformDuration $easing;
+    transition: margin-left $transformDuration $easing;
+
+    &.fixed {
+        position: fixed;
+        height: 100%;
+        top: 0px;
+    }
 }
 
 .dSidebarToggled {
-    margin-left: -80px;
+    margin-left: -$sidebarInside;
 }
 
 .dSidebarItemList {
@@ -51,7 +65,7 @@ $sidebarWidth: 200px;
 }
 
 .dMainContent {
-    margin-left: 80px;
+    margin-left: $sidebarInside;
     transition: $transformDuration $easing;
 }
 

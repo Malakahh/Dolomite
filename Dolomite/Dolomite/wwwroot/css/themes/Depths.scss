@@ -1,19 +1,31 @@
-﻿$mainColorLight: #000037; //37
-$mainColorDark: #000025; //25
-$mainColorHighlight: $mainColorLight + #00001E;
-$textColorLightNormal: #BBBBBB;
+﻿$mainColorLight: #2F3136;
+$mainColorDark: #1E2124;
+$mainColorHighlight: $mainColorLight + #1E2328;
+$textColorLightNormal: #FFFFFF;
 $textColorLightHover: #FFFFFF;
-$borderColorLightBright: $mainColorLight + #1E1E1E;
-$borderColorLightDark: $mainColorLight - #191919;
+$borderColorLightBright: $mainColorLight + #1E2328;
+$borderColorLightDark: $mainColorLight - #17191B;
 
 body {
     background-color: $mainColorLight;
 }
 
+.dTopbar {
+    background-color: $mainColorDark;
+    border-bottom: 1px solid $borderColorLightBright;
+    padding: 5px;
+
+    .dTitle {
+        font-family: 'Marck Script', cursive;
+        color: $textColorLightNormal;
+        font-size: 26pt;
+    }
+}
+
 .dSidebar {
     background-color: $mainColorDark;
     border-right: 1px solid $borderColorLightDark;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .dSidebarItemList {
@@ -28,6 +40,8 @@ body {
         background-color: $mainColorLight;
         border-top: 1px solid $borderColorLightBright;
         border-bottom: 1px solid $borderColorLightDark;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
     }
 
     li:hover {
@@ -60,4 +74,8 @@ body {
             background-color: $textColorLightHover;
         }
     }
+}
+
+.dMainContent {
+    color: $textColorLightNormal;
 }

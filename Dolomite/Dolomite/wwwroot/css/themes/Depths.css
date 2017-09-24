@@ -1,10 +1,19 @@
 ﻿body {
-  background-color: #000037; }
+  background-color: #2F3136; }
+
+.dTopbar {
+  background-color: #1E2124;
+  border-bottom: 1px solid #4d545e;
+  padding: 5px; }
+  .dTopbar .dTitle {
+    font-family: 'Marck Script', cursive;
+    color: #FFFFFF;
+    font-size: 26pt; }
 
 .dSidebar {
-  background-color: #000025;
-  border-right: 1px solid #00001e;
-  padding-top: 10px; }
+  background-color: #1E2124;
+  border-right: 1px solid #18181b;
+  padding-top: 5px; }
 
 .dSidebarItemList {
   margin-bottom: 5px;
@@ -13,24 +22,29 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 1px;
-    background-color: #000037;
-    border-top: 1px solid #1e1e55;
-    border-bottom: 1px solid #00001e; }
+    background-color: #2F3136;
+    border-top: 1px solid #4d545e;
+    border-bottom: 1px solid #18181b;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
   .dSidebarItemList li:hover {
-    background-color: #000055; }
+    background-color: #4d545e; }
 
 .dSidebarItemText {
   text-indent: 5px;
-  color: #BBBBBB; }
+  color: #FFFFFF; }
   .dSidebarItemText .dSidebarItemTextLarge {
-    color: #BBBBBB;
+    color: #FFFFFF;
     font-size: 26px; }
   .dSidebarItemText:hover {
     color: #FFFFFF; }
 
 .dSidebarHamburger span {
-  background-color: #BBBBBB; }
+  background-color: #FFFFFF; }
 
 .dSidebarHamburger:hover span {
   background-color: #FFFFFF; }
+
+.dMainContent {
+  color: #FFFFFF; }
 
