@@ -2,13 +2,22 @@
   background-color: #000037; }
 
 .dSidebar {
-  background-color: #000025; }
+  background-color: #000025;
+  border-right: 1px solid #00001e;
+  padding-top: 10px; }
 
 .dSidebarItemList {
-  padding-top: 10px; }
+  margin-bottom: 5px;
+  padding-right: 5px; }
   .dSidebarItemList li {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    margin-bottom: 1px;
+    background-color: #000037;
+    border-top: 1px solid #1e1e55;
+    border-bottom: 1px solid #00001e; }
+  .dSidebarItemList li:hover {
+    background-color: #000055; }
 
 .dSidebarItemText {
   text-indent: 5px;

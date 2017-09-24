@@ -19,7 +19,8 @@
   padding: 0; }
 
 .dSidebarItemList li {
-  height: 50px; }
+  height: 50px;
+  transition: 0.25s ease-in-out; }
   .dSidebarItemList li .dSidebarItemText {
     position: relative;
     display: flex;
@@ -34,8 +35,8 @@
       position: absolute;
       right: 0px;
       top: 0px;
-      width: calc(100% / 3);
-      height: 100%; }
+      width: calc(80% / 3);
+      height: 80%; }
 
 .dMainContent {
   margin-left: 80px;

@@ -1,7 +1,10 @@
-﻿$mainColorLight: #000037;
-$mainColorDark: #000025;
+﻿$mainColorLight: #000037; //37
+$mainColorDark: #000025; //25
+$mainColorHighlight: $mainColorLight + #00001E;
 $textColorLightNormal: #BBBBBB;
 $textColorLightHover: #FFFFFF;
+$borderColorLightBright: $mainColorLight + #1E1E1E;
+$borderColorLightDark: $mainColorLight - #191919;
 
 body {
     background-color: $mainColorLight;
@@ -9,17 +12,26 @@ body {
 
 .dSidebar {
     background-color: $mainColorDark;
+    border-right: 1px solid $borderColorLightDark;
+    padding-top: 10px;
 }
 
-
-
 .dSidebarItemList {
-    $padding: 10px;
-    padding-top: $padding;
+    margin-bottom: 5px;
+    padding-right: 5px;
 
-    li  {
+    li {
+        $padding: 10px;
         padding-left: $padding;
         padding-right: $padding;
+        margin-bottom: 1px;
+        background-color: $mainColorLight;
+        border-top: 1px solid $borderColorLightBright;
+        border-bottom: 1px solid $borderColorLightDark;
+    }
+
+    li:hover {
+        background-color: $mainColorHighlight;
     }
 }
 

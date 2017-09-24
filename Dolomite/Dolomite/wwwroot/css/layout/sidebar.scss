@@ -27,6 +27,7 @@ $sidebarWidth: 200px;
 
 .dSidebarItemList li {
     height: 50px;
+    transition: $transformDuration / 2 $easing;
 
     .dSidebarItemText {
         position: relative;
@@ -43,8 +44,8 @@ $sidebarWidth: 200px;
             position: absolute;
             right: 0px;
             top: 0px;
-            width: calc(100% / 3);
-            height: 100%;
+            width: calc(80% / 3);
+            height: 80%;
         }
     }
 }

@@ -16,4 +16,3 @@ dSidebarHamburger.addEventListener("click", function () {
         sidebarHidden = true;
     }
 });
-//# sourceMappingURL=sidebar.js.map
