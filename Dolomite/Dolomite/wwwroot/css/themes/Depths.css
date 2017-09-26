@@ -9,6 +9,9 @@
     font-family: 'Marck Script', cursive;
     color: #FFFFFF;
     font-size: 26pt; }
+    .dTopbar .dTitle a {
+      text-decoration: none;
+      color: inherit; }
 
 .dSidebar {
   background-color: #1E2124;

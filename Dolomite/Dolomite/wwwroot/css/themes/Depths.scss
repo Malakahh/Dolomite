@@ -19,6 +19,11 @@ body {
         font-family: 'Marck Script', cursive;
         color: $textColorLightNormal;
         font-size: 26pt;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
 
