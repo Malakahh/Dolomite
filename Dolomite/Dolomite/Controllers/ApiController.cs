@@ -8,10 +8,9 @@ namespace Dolomite.Controllers
 {
     public class ApiController : Controller
     {
-        [HttpGet("api/test/{poop}")]
-        public IActionResult Test(int poop)
+        public IActionResult Test()
         {
-            return new ObjectResult("This is a test" + poop);
+            return new ObjectResult("This is a test");
         }
     }
 }
